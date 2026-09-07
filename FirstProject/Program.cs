@@ -6,9 +6,8 @@
     {
         static void Main(string[] args)
         {
-            Console.Title  = "név kérés";
-            Console.WindowWidth = 50; 
-            
+            Console.Title = "név kérés";
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("ki vagy: ");
 
             string Name = Console.ReadLine();
