@@ -12,6 +12,9 @@ namespace calc
             while (true)
                 try
                 {
+                    Console.WriteLine("--------------------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine("adj meg egy szamot");
                     Console.Write("szám1: ");
                     decimal num1 = decimal.Parse(Console.ReadLine()!);
                     Console.Write("szám2: ");
