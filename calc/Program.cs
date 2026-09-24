@@ -53,7 +53,7 @@ namespace calc
 
                     if (!szam2)
                     {
-                        Console.WriteLine("Hiba! Nem számot adtál meg!");
+                        Console.WriteLine("Ez nem szám");
                         continue;
                     }
 
