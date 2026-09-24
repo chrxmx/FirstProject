@@ -16,9 +16,49 @@ namespace calc
                     Console.WriteLine("");
                     Console.WriteLine("adj meg egy szamot");
                     Console.Write("szám1: ");
-                    decimal num1 = decimal.Parse(Console.ReadLine()!);
+
+                    string input1 = Console.ReadLine()!;
+
+                    bool szam1 = true;
+
+                    foreach (char c in input1)
+                    {
+                        if (!char.IsDigit(c) && c != '-' && c != '.')
+                        {
+                            szam1 = false;
+                        }
+                    }
+
+                    if (!szam1)
+                    {
+                        Console.WriteLine("Hiba! Nem számot adtál meg!");
+                        continue;
+                    }
+
+                    decimal num1 = decimal.Parse(input1);
+
                     Console.Write("szám2: ");
-                    decimal num2 = decimal.Parse(Console.ReadLine()!);
+
+                    string input2 = Console.ReadLine()!;
+
+                    bool szam2 = true;
+
+                    foreach (char c in input2)
+                    {
+                        if (!char.IsDigit(c) && c != '-' && c != '.')
+                        {
+                            szam2 = false;
+                        }
+                    }
+
+                    if (!szam2)
+                    {
+                        Console.WriteLine("Hiba! Nem számot adtál meg!");
+                        continue;
+                    }
+
+                    decimal num2 = decimal.Parse(input2);
+
                     Console.WriteLine("adj meg egy operátort: +,-,*,^,/");
 
                     
@@ -64,12 +104,11 @@ namespace calc
                         break;
                     }
 
-                }
+}
                 catch (FormatException)
                 {
                     Console.WriteLine("nem számot adtál meg");
                 }
-
         }
     }
 }
