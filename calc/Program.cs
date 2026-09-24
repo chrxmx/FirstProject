@@ -31,7 +31,7 @@ namespace calc
 
                     if (!szam1)
                     {
-                        Console.WriteLine("Hiba! Nem számot adtál meg!");
+                        Console.WriteLine("Ez nem szám");
                         continue;
                     }
 
