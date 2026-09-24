@@ -23,7 +23,7 @@ namespace calc
 
                     foreach (char c in input1)
                     {
-                        if (!char.IsDigit(c) && c != '-' && c != '.')
+                        if (!char.IsDigit(c))
                         {
                             szam1 = false;
                         }
@@ -45,7 +45,7 @@ namespace calc
 
                     foreach (char c in input2)
                     {
-                        if (!char.IsDigit(c) && c != '-' && c != '.')
+                        if (!char.IsDigit(c))
                         {
                             szam2 = false;
                         }
