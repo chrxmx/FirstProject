@@ -11,6 +11,7 @@
 //Console. ForegroundColor = ConsoleColor Green;
 //Console. BackgroundColor = ConsoLeCoLor.Green;
 //Thread.Sleep(miLisec);
+#pragma warning disable CA1416 // Validate platform compatibility
 using System.ComponentModel;
 
 namespace DrawingProject
@@ -135,6 +136,7 @@ namespace DrawingProject
                     case ConsoleKey.F:
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.Clear();
+                        DrawEdges();
                         break;
                 }
 
