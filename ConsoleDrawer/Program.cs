@@ -18,12 +18,14 @@ namespace DrawingProject
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             DrawEdges();
             Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
             Console.ReadKey();
             Console.WriteLine();
+            char drawchar = '█';
             while (true)
             {
                 var key = Console.ReadKey(true);
@@ -34,10 +36,20 @@ namespace DrawingProject
                         {
                             Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
                         }
+                        if (Console.CapsLock)
+                        {
+                            Console.Write(drawchar);
+                            Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                        }
                         break;
                     case ConsoleKey.DownArrow:
                         if (Console.CursorTop < Console.WindowHeight - 2)
                         {
+                            Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop + 1);
+                        }
+                        if (Console.CapsLock)
+                        {
+                            Console.Write(drawchar);
                             Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop + 1);
                         }
                         break;
@@ -46,45 +58,55 @@ namespace DrawingProject
                         {
                             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         }
+                        if (Console.CapsLock)
+                        {
+                            Console.Write(drawchar);
+                            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        }
                         break;
                     case ConsoleKey.RightArrow:
                         if (Console.CursorLeft < Console.WindowWidth - 2)
                         {
                             Console.SetCursorPosition(Console.CursorLeft + 1, Console.CursorTop);
                         }
+                        if (Console.CapsLock)
+                        {
+                            Console.Write(drawchar);
+                            Console.SetCursorPosition(Console.CursorLeft + 1, Console.CursorTop);
+                        }
                         break;
                     case ConsoleKey.Spacebar:
-                        Console.Write("█");
+                        Console.Write(drawchar);
                         break;
                     case ConsoleKey.F1:
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        drawchar = '█';
                         break;
                     case ConsoleKey.F2:
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        drawchar = '▓';
                         break;
                     case ConsoleKey.F3:
-                        Console.ForegroundColor = ConsoleColor.Blue;
+                        drawchar = '▒';
                         break;
                     case ConsoleKey.F4:
-                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        drawchar = '░';
                         break;
                     case ConsoleKey.D1:
-                        Console.ForegroundColor = ConsoleColor.Magenta;
+                        Console.ForegroundColor = ConsoleColor.Green;
                         break;
                     case ConsoleKey.D2:
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         break;
                     case ConsoleKey.D3:
-                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.ForegroundColor = ConsoleColor.Blue;
                         break;
                     case ConsoleKey.D4:
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         break;
                     case ConsoleKey.D5:
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         break;
                     case ConsoleKey.D6:
-                        Console.ForegroundColor = ConsoleColor.DarkGreen;
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
                         break;
                     case ConsoleKey.D7:
                         Console.ForegroundColor = ConsoleColor.DarkBlue;
@@ -103,8 +125,17 @@ namespace DrawingProject
                         Console.Write(" ");
                         Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         break;
-
-
+                    case ConsoleKey.Subtract:
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        break;
+                    case
+                        ConsoleKey.Add:
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break;
+                    case ConsoleKey.F:
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.Clear();
+                        break;
                 }
 
             }
