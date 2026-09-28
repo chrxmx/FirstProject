@@ -31,19 +31,27 @@ namespace DrawingProject
                 {
                     case ConsoleKey.UpArrow:
                         if (Console.CursorTop > 0)
+                        {
                             Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
+                        }
                         break;
                     case ConsoleKey.DownArrow:
-                        if (Console.CursorTop < Console.WindowHeight - 1)
+                        if (Console.CursorTop < Console.WindowHeight - 2)
+                        {
                             Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop + 1);
+                        }
                         break;
                     case ConsoleKey.LeftArrow:
-                        if (Console.CursorLeft > 0)
+                        if (Console.CursorLeft > 1)
+                        {
                             Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+                        }
                         break;
                     case ConsoleKey.RightArrow:
-                        if (Console.CursorLeft < Console.WindowWidth - 1)
+                        if (Console.CursorLeft < Console.WindowWidth - 2)
+                        {
                             Console.SetCursorPosition(Console.CursorLeft + 1, Console.CursorTop);
+                        }
                         break;
                     case ConsoleKey.Spacebar:
                         Console.Write("█");
@@ -61,46 +69,46 @@ namespace DrawingProject
                         Console.ForegroundColor = ConsoleColor.Yellow;
                         break;
                     case ConsoleKey.D1:
-                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         break;
                     case ConsoleKey.D2:
-                        Console.BackgroundColor = ConsoleColor.DarkGray;
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
                         break;
                     case ConsoleKey.D3:
-                        Console.BackgroundColor = ConsoleColor.Gray;
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         break;
                     case ConsoleKey.D4:
-                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
                         break;
                     case ConsoleKey.D5:
-                        Console.BackgroundColor = ConsoleColor.DarkRed;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         break;
                     case ConsoleKey.D6:
-                        Console.BackgroundColor = ConsoleColor.DarkGreen;
+                        Console.ForegroundColor = ConsoleColor.DarkGreen;
                         break;
                     case ConsoleKey.D7:
-                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.ForegroundColor = ConsoleColor.DarkBlue;
                         break;
                     case ConsoleKey.D8:
-                        Console.BackgroundColor = ConsoleColor.DarkYellow;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         break;
                     case ConsoleKey.D9:
-                        Console.BackgroundColor = ConsoleColor.DarkCyan;
+                        Console.ForegroundColor = ConsoleColor.DarkCyan;
                         break;
                     case ConsoleKey.Delete:
                         Console.Write(" ");
                         Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         break;
                     case ConsoleKey.Backspace:
-                        if (Console.CursorLeft > 0)
-                        {
-                            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-                            Console.Write(" ");
-                            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-                        }
+                        Console.Write(" ");
+                        Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
                         break;
+
+
                 }
+
             }
+            
         }
         private static void DrawEdges()
         {
