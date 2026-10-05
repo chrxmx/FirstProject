@@ -25,8 +25,7 @@ namespace DrawingProject
             DrawEdges();
             Menu();
             Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
-            Console.ReadKey();
-            Console.WriteLine();
+            Console.ReadKey();;
             char drawchar = '█';
             while (true)
             {
@@ -155,6 +154,17 @@ namespace DrawingProject
             Console.SetCursorPosition(Console.WindowWidth / 2 + 9, Console.WindowHeight / 2 - 11);
             Console.WriteLine("║");
             Console.SetCursorPosition(Console.WindowWidth / 2 - 10, Console.WindowHeight / 2 - 10);
+            Console.WriteLine("╚══════════════════╝");
+
+            Console.SetCursorPosition(Console.WindowWidth / 2 - 10, Console.WindowHeight / 2 - 8);
+            Console.WriteLine("╔══════════════════╗");
+            Console.SetCursorPosition(Console.WindowWidth / 2 - 5, Console.WindowHeight / 2 - 7);
+            Console.WriteLine("Betöltés");
+            Console.SetCursorPosition(Console.WindowWidth / 2 - 10, Console.WindowHeight / 2 - 7);
+            Console.WriteLine("║");
+            Console.SetCursorPosition(Console.WindowWidth / 2 + 9, Console.WindowHeight / 2 - 7);
+            Console.WriteLine("║");
+            Console.SetCursorPosition(Console.WindowWidth / 2 - 10, Console.WindowHeight / 2 - 6);
             Console.WriteLine("╚══════════════════╝");
 
         }
